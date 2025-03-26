@@ -6,3 +6,4 @@ class user:
     def displayinfo(self):
         return f"user: {self.name}, {self.email}"
 
+bro = user("aiden","email")
