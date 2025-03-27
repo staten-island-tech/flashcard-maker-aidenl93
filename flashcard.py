@@ -1,10 +1,11 @@
-class user:
-    def __init__(self,name,email):
-        self.name = name 
-        self.email = email 
-
-    def displayinfo(self):
-        return f"user: {self.name}, {self.email}"
-
-bro = user("aiden","email")
-print(bro)
+import json 
+class teach: 
+    mydict = {}
+    wanna = input("wanna make a key? y/n")
+    while wanna.lower == "y":
+        key = input("give me key")
+        value = input ("give me value")
+        mydict[key] = value 
+        print(mydict)
+        
+    
