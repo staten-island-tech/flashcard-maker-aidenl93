@@ -11,10 +11,9 @@ class teach:
             self.ok[make] = make2 
     def show(self):
         print(self.ok)
-    def save(self, file):
-        file = "flashcards.json"
-        with open (file, 'w') as json_file:
-            json.dump(self.ok, json_file, indent=4)
+    def save(self):
+        with open ("flashcards.json", 'w') as file:
+            json.dump(self.ok, file, indent=4)
 yaw = input("1 for teacher 2 for study")
 if yaw == "1":
     bro = teach()
@@ -22,5 +21,5 @@ if yaw == "1":
     bro.show()
     saver = input("wanna save")
     if saver == "yes".lower():
-        bro.save("flashcards.json")
+        bro.save()
     
