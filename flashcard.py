@@ -14,12 +14,19 @@ class teach:
     def save(self):
         with open ("flashcards.json", 'w') as file:
             json.dump(self.ok, file, indent=4)
-yaw = input("1 for teacher 2 for study")
-if yaw == "1":
-    bro = teach()
-    bro.adding()
-    bro.show()
-    saver = input("wanna save")
-    if saver == "yes".lower():
-        bro.save()
-    
+while True:
+    yaw = input("1 for teacher 2 for student 3 to quit")
+
+    if yaw == "1":
+        bro = teach()
+        bro.adding()
+        bro.show()
+        saver = input("wanna save")
+        if saver.lower() == "yes":
+            bro.save()
+            print("saved")
+        elif yaw == "2":
+            print("wait")
+        elif yaw == "3":
+            print("ok")
+            exit()
