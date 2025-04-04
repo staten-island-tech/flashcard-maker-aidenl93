@@ -1,4 +1,5 @@
 import json 
+correctans = 0 
 class teach:
     def __init__(self):
         self.ok = {}
@@ -14,6 +15,21 @@ class teach:
     def save(self):
         with open ("flashcards.json", 'w') as file:
             json.dump(self.ok, file, indent=4)
+class student:
+    def __init__(self, teach_instance):
+        self.teach_instance = teach_instance
+    def start(self):
+        global correctans
+        for key, value in self.teach_instance.ok.items():
+            print(key)
+            while True:
+                x = input("what is value")
+                if x == value:
+                    print("correct")
+                    correctans += 1 
+                    print(f"streak: {correctans}")
+                else:
+                    print("wrong lol it was {correctans}")
 while True:
     yaw = input("1 for teacher 2 for student 3 to quit")
 
@@ -26,7 +42,8 @@ while True:
             bro.save()
             print("saved")  
     elif yaw == "2":
-        print("wait")
+        student_instance = student(bro)
+        student_instance.start()
     elif yaw == "3":
         print("ok")
         break
