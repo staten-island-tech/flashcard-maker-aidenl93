@@ -25,8 +25,8 @@ while True:
         if saver.lower() == "yes":
             bro.save()
             print("saved")  
-        elif yaw == "2":
-            print("wait")
-        elif yaw == "3":
-            print("ok")
-            break
+    elif yaw == "2":
+        print("wait")
+    elif yaw == "3":
+        print("ok")
+        break
