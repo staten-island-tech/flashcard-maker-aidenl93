@@ -22,14 +22,13 @@ class student:
         global correctans
         for key, value in self.teach_instance.ok.items():
             print(key)
-            while True:
-                x = input("what is value")
-                if x == value:
-                    print("correct")
-                    correctans += 1 
-                    print(f"streak: {correctans}")
-                else:
-                    print("wrong lol it was {correctans}")
+            x = input("what is value")
+            if x == value:
+                print("correct")
+                correctans += 1 
+                print(f"streak: {correctans}")
+            else:
+                print(f"wrong lol it was {correctans}")
 while True:
     yaw = input("1 for teacher 2 for student 3 to quit")
 
