@@ -24,9 +24,9 @@ while True:
         saver = input("wanna save")
         if saver.lower() == "yes":
             bro.save()
-            print("saved")
+            print("saved")  
         elif yaw == "2":
             print("wait")
         elif yaw == "3":
             print("ok")
-            exit()
+            break
