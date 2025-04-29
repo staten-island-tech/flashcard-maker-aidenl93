@@ -29,7 +29,8 @@ class student:
                 print(f"streak: {correctans}")
             else:
                 print(f"wrong lol it was {correctans}")
-while True:
+                correctans = 0 
+while True: 
     yaw = input("1 for teacher 2 for student 3 to quit")
 
     if yaw == "1":
@@ -41,8 +42,8 @@ while True:
             bro.save()
             print("saved")  
     elif yaw == "2":
-        student_instance = student(bro)
-        student_instance.start()
+        student_bro = student(bro)
+        student_bro.start()
     elif yaw == "3":
         print("ok")
         break
